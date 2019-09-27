@@ -7,12 +7,12 @@ class Api::V1::BeachesController < ApplicationController
     end
 
     def show
-        @beach = @location.beaches.new(beach_params)
+        @beach = Beach.find(params[:id])
         render json: @beach
     end
 
     def create
-        @beach = Beach.new(beach_params)
+        @beach = @location.beaches.new(beach_params)
         if @beach.save
            render json: @beach
         else
@@ -33,4 +33,4 @@ class Api::V1::BeachesController < ApplicationController
         params.require(:beach).permit(:location_id, :name, :summary, :region, :image_url)
     end
 end
-end
+

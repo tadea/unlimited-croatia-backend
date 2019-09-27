@@ -1,8 +1,8 @@
 class Api::V1::LocationsController < ApplicationController
-    before_action :set_location, only: [:show, :update, :destroy]
+    # before_action :set_location, only: [:show, :update, :destroy]
 
     def index
-     @locatios = Location.all
+     @locations = Location.all
      render json: @locations
     end
 
@@ -16,17 +16,16 @@ class Api::V1::LocationsController < ApplicationController
     end
 
     def show
+        @location = Location.find(params[:id])
         render json: @location
     end
 
     def destroy
+        @location = Location.find(params[:id])
         @location.destroy
     end
 
     private
-    def set_location
-        @location = Location.find_by(id: params[:id])
-    end
 
     def location_params
         params.require(:location).permit(:name, :city)
