@@ -1,7 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# location = Location.create(name: 'Dalmatia', city: 'Brac')
+# beach = Beach.create(location_id: 1, name: 'Golden Cape', summary: 'The Zlatni Rat (Golden Cape) is unique in the world. Like a tongue it stretches almost half a kilometre perpendicularly out into the sea.', region: 'Dalmatia Coast', image_url: nil)
+# beach_two = Beach.create(location_id: 1, name: 'Paklina Beach', summary: 'This beach is combination of textile beach and the naturist mostly visited in the high season.', region: 'Zagreb', image_url: nil)
