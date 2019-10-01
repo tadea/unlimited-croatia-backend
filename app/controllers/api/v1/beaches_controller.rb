@@ -14,7 +14,7 @@ class Api::V1::BeachesController < ApplicationController
     def create
         @beach = @location.beaches.new(beach_params)
         if @beach.save
-           render json: @beach
+           render json: @location
         else
            render json: {error: 'Error creating beach'}
         end
