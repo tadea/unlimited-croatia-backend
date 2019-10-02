@@ -21,8 +21,13 @@ class Api::V1::BeachesController < ApplicationController
     end
 
     def destroy
-        
+    
+        @beach = Beach.find(params["id"])
+        @location = Location.find(@beach.location_id)
+        @beach.destroy
+        render json: @location
     end
+
 
     private
     def set_location

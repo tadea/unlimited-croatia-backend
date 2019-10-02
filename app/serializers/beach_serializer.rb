@@ -1,3 +1,3 @@
 class BeachSerializer < ActiveModel::Serializer
-  attributes :id, :name, :summary, :region
+  attributes :id, :name, :summary, :region, :location_id
 end
