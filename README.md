@@ -1,24 +1,7 @@
-# README
+# Installation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone down this repository.
+2. cd to 'unlimited-croatia-backend'
+3. run `bundle install`
+4. run `rails db:migrate RAILS_ENV=development`
+5. start rails server `rails s`
